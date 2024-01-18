@@ -18,7 +18,7 @@ namespace JenkinsTesting.Controllers
         {
             string env = _config.GetValue<string>("where");
             string version = _config.GetValue<string>("version");
-            return Ok($"Is Alive -- {version} -- {env}");
+            return Ok($"{env} -- {version}");
         }
     }
 }
