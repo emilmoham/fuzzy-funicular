@@ -17,8 +17,8 @@ namespace JenkinsTesting.Controllers
         public IActionResult IsAlive()
         {
             string env = _config.GetValue<string>("where");
-            string version = _config.GetValue<string>("version");
-            return Ok($"{env} -- {version}");
+            string revision = _config.GetValue<string>("revision");
+            return Ok($"{env} -- {revision}");
         }
     }
 }
