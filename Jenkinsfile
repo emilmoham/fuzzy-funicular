@@ -4,10 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh '
-                    cd JenkinsTesting
-                    dotnet build
-                '
+                dotnetBuild
             }
         }
     }
