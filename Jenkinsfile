@@ -1,10 +1,15 @@
 pipeline {
-    agent prodigy-commissary-dev
+    agent { label 'prodigy-commissary-dev' }
 
     stages {
         stage('Build') {
             steps {
-                dotnetBuild
+                 sh '''
+                    ls -al
+                    cd JenkinsTesting
+                    ls -al
+                 '''
+                 sh 'ls -al'
             }
         }
     }
